@@ -1,0 +1,24 @@
+// AST Graph
+digraph {
+	rankdir=TB size="8,5"
+	node [color=lightgrey fontname=Arial shape=box style=filled]
+	edge [arrowhead=vee arrowsize=0.5 color=black]
+	function_1 [label="Function: risky_operation" color=lightblue shape=ellipse]
+	function_2 [label="Function: complex_function" color=lightblue shape=ellipse]
+	if_3 [label="If statement" color=orange shape=diamond]
+	function_2 -> if_3
+	for_4 [label="For loop" color=orange shape=diamond]
+	function_2 -> for_4
+	while_5 [label="While loop" color=orange shape=diamond]
+	function_2 -> while_5
+	try_6 [label="Try block" color=orange shape=diamond]
+	function_2 -> try_6
+	async_function_7 [label="Async Function: async_function" color=lightgreen shape=ellipse]
+	function_8 [label="Function: method" color=lightblue shape=ellipse]
+	cluster_MyClass -> function_8
+	subgraph cluster_MyClass {
+		node [color=lightpink style=filled]
+		label="Class: MyClass"
+		color=lightgrey style=filled
+	}
+}

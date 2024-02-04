@@ -1,0 +1,71 @@
+{
+    "nodes": [
+        {
+            "name": "node",
+            "label": null
+        },
+        {
+            "name": "edge",
+            "label": null
+        },
+        {
+            "name": "function_1",
+            "label": "Function: risky_operation"
+        },
+        {
+            "name": "function_2",
+            "label": "Function: complex_function"
+        },
+        {
+            "name": "if_3",
+            "label": "If statement"
+        },
+        {
+            "name": "for_4",
+            "label": "For loop"
+        },
+        {
+            "name": "while_5",
+            "label": "While loop"
+        },
+        {
+            "name": "try_6",
+            "label": "Try block"
+        },
+        {
+            "name": "async_function_7",
+            "label": "Async Function: async_function"
+        },
+        {
+            "name": "function_8",
+            "label": "Function: method"
+        }
+    ],
+    "edges": [
+        {
+            "source": "function_2",
+            "target": "if_3",
+            "label": null
+        },
+        {
+            "source": "function_2",
+            "target": "for_4",
+            "label": null
+        },
+        {
+            "source": "function_2",
+            "target": "while_5",
+            "label": null
+        },
+        {
+            "source": "function_2",
+            "target": "try_6",
+            "label": null
+        },
+        {
+            "source": "cluster_MyClass",
+            "target": "function_8",
+            "label": null
+        }
+    ]
+}

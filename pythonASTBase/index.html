@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AST Visualization</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        svg {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+<!-- This is where your SVG content will be injected -->
+<div id="graph"></div>
+
+<script>
+    // Load the SVG from the server and add it to the page
+    d3.xml("ast_graph.svg").then(data => {
+        d3.select("#graph").node().append(data.documentElement);
+
+        // Add zoom functionality
+        const svg = d3.select("svg");
+        svg.call(d3.zoom().on("zoom", (event) => {
+            svg.attr("transform", event.transform);
+        }));
+
+        // Example of making nodes clickable
+        svg.selectAll("g.node").on("click", function(event, d) {
+            alert(`Clicked on ${d3.select(this).select("text").text()}`);
+        });
+    });
+</script>
+
+</body>
+</html>
