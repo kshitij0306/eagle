@@ -16,5 +16,20 @@
         "path": "./snippets/snippets.code-snippets"
       }
     ]
-  }
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Kshitij Srivastava",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kshitij0306/eagle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kshitij0306/eagle/issues"
+  },
+  "homepage": "https://github.com/kshitij0306/eagle#readme"
 }
